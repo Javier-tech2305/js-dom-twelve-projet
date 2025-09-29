@@ -18,7 +18,11 @@ window.addEventListener("scroll",onScrollDisplayModal);
 
 // 5. Je fais disparaite la modale au clique sur la croix
 modalQuit.addEventListener("click",function(){
-    // ...
+
+    modal.style.display = "none";
+    
+    
+
 
     window.removeEventListener("scroll",onScrollDisplayModal);
 });
@@ -31,7 +35,7 @@ function onScrollDisplayModal(){
     
  modal.style.display = "flex"
 
- //modal.classList.remove("display")
+ 
 
 
     
