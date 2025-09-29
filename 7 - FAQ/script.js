@@ -16,5 +16,8 @@ questions.forEach(function(question){
     question.addEventListener("click",function(){
         // 4. Je recupere la reponse correspondante et le chevron correspondante
         // ..
+        console.log("qsdqf");
+       question.nextElementSibling.classList.toggle("show-reponse");
     });
 });
+
