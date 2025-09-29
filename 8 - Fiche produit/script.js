@@ -20,3 +20,24 @@ const panierMsg = document.querySelector(".panier-msg");
 let panier = 0;
 
 // ...
+
+vignettes.forEach(vignette =>
+    
+    vignette.addEventListener("click", function(){
+        
+        const smallImag = vignette.getAttribute("src");
+        const imag = fullImg.getAttribute("src");
+        fullImg.setAttribute("src", smallImag);
+        vignette.setAttribute("src",imag);
+    })
+)
+
+
+
+
+btnAdd.addEventListener("click",function(){
+
+    panier++;
+    panierMsg.innerHTML = "Vous avez " + panier + " produits dans votre panier";
+})
+
