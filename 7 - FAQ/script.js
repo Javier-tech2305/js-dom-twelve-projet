@@ -17,7 +17,9 @@ questions.forEach(function(question){
         // 4. Je recupere la reponse correspondante et le chevron correspondante
         // ..
         console.log("qsdqf");
-       question.nextElementSibling.classList.toggle("show-reponse");
+        question.nextElementSibling.classList.toggle("show-reponse");
+        question.lastElementChild.classList.toggle("fa-chevron-down")
+        question.lastElementChild.classList.toggle("fa-chevron-up")
     });
 });
 
