@@ -31,10 +31,27 @@ const posts =
 ];
 
 // 3. Je parcours la bdd
-posts.forEach(function(post){
-    // 4. Je créer un nouveau post dans le conteneur de post pour chaque post de la BDD
+posts.forEach(element => {
     
-    // 5. Je l'ajoute dans le conteneur de publication
+    const post = document.createElement("div")
+        post.setAttribute("class","post")
+    postsContainer.appendChild(post)
     
+    const titre = document.createElement("div")
+    titre.setAttribute("class", "post-titre")
+    titre.innerHTML = "<a href= " + element['link'] + ">" +  element['titre'] + "</a>"
+    post.appendChild(titre)
 
+    const extrait = document.createElement("div")
+    extrait.setAttribute("class", "post-extrait")
+    extrait.innerHTML = element['extrait']
+    post.appendChild(extrait)
+
+    const tag = document.createElement("div")
+    tag.setAttribute("class", "post-hastag")
+    tag.innerHTML = element['hashtag']
+    post.appendChild(tag)
+
+
+          
 });
